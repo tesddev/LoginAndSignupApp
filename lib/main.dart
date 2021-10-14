@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: WelcomeScreen(),
+  ));
+}
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,7 +33,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Center(
               child: Image(
-                image: AssetImage('assets/welcomePic.png'),
+                image: AssetImage('assets/homepagePicture.png'),
                 height: 200,
               ),
             ),
@@ -54,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding: EdgeInsets.all(10.0),
                       color: Colors.blue[300],
                       textColor: Colors.white,
-                      child: Image.asset('assets/twitter.png'),
+                      child: Image.asset('assets/twitter_icon.png'),
                     ),
                   ),
                 ),
@@ -67,7 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding: EdgeInsets.all(10.0),
                       color: Colors.blue[900],
                       textColor: Colors.white,
-                      child: Image.asset('assets/facebook.png'),
+                      child: Image.asset('assets/facebook_icon.png'),
                     ),
                   ),
                 ),
