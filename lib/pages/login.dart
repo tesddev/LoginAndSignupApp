@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,13 +98,21 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            TextField(
+            TextFormField(
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(
                   hintText: 'Password',
                   border: OutlineInputBorder(),
                   helperText: 'Remember me',
                   counterText: 'Forgot password?'
               ),
+              validator: (String? value){
+                if(value!.isEmpty)
+                {
+                  return 'Please Enter Name';
+                }
+                return null;
+              },
             ),
             SizedBox(
               height: 10.0,
