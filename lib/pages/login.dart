@@ -111,7 +111,9 @@ class LoginPage extends StatelessWidget {
                     margin: EdgeInsets.all(10),
                     height: 60.0,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/confirmation');
+                      },
                       padding: EdgeInsets.all(10.0),
                       color: Colors.blue[700],
                       textColor: Colors.white,
