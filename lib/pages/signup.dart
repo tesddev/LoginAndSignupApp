@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,38 +10,32 @@ class WelcomeScreen extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10.0, 80.0, 10.0, 0.0),
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 50.0,
+            ),
             Text(
-              'Welcome',
+              'Sign Up',
               style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.normal),
             ),
             SizedBox(
               height: 5.0,
             ),
             Text(
-              'Please Login or sign up to continue using our app',
+              'Please signup to enter in a app',
               style: TextStyle(
-              fontSize: 13.0,
-              color: Colors.grey,
-              fontWeight: FontWeight.normal),
+                  fontSize: 15.0,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.normal),
             ),
             SizedBox(
-              height: 10.0,
-            ),
-            Center(
-              child: Image(
-                image: AssetImage('assets/homepagePicture.png'),
-                height: 200,
-              ),
-            ),
-            SizedBox(
-              height: 25.0,
+              height: 50.0,
             ),
             Text(
               'Enter via social networks',
               style: TextStyle(
-                fontSize: 12.0,
-                color: Colors.grey,
-                fontWeight: FontWeight.normal),
+                  fontSize: 15.0,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.normal),
             ),
             SizedBox(
               height: 15.0,
@@ -76,14 +71,33 @@ class WelcomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 15.0,
+              height: 30.0,
             ),
             Text(
-              'or login with email',
+              'or sign up with email',
               style: TextStyle(
-                fontSize: 12.0,
-                color: Colors.grey,
-                fontWeight: FontWeight.normal
+                  fontSize: 13.0,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.normal
+              ),
+            ),
+            SizedBox(
+              height: 25.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Email',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: 'Password',
+                  border: OutlineInputBorder(),
+                  helperText: 'I agree with privacy policy',
               ),
             ),
             SizedBox(
@@ -91,23 +105,20 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-               Expanded(
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  height: 60.0,
-                  child: FlatButton(
-                    onPressed: () {},
-                    padding: EdgeInsets.all(10.0),
-                    color: Colors.blue[700],
-                    textColor: Colors.white,
-                  child: Text("Sign up", style: TextStyle(fontSize: 15)),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    height: 60.0,
+                    child: FlatButton(
+                      onPressed: () {},
+                      padding: EdgeInsets.all(10.0),
+                      color: Colors.blue[700],
+                      textColor: Colors.white,
+                      child: Text("Sign up", style: TextStyle(fontSize: 15)),
+                    ),
                   ),
                 ),
-               ),
               ],
-            ),
-            SizedBox(
-              height: 10.0,
             ),
             Row(
               children: [
@@ -118,16 +129,16 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {},
                     padding: EdgeInsets.fromLTRB(70.0, 0.0, 0.0, 0.0),
                     textColor: Colors.grey,
-                    child: Text("Don't have an account?", style: TextStyle(fontSize: 15)),
+                    child: Text("Already have an account?", style: TextStyle(fontSize: 15)),
                   ),
                 ),
                 Container(
                   height: 50.0,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/login');
+                      Navigator.pushNamed(context, '/signup');
                     },
-                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 60.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 35.0, 0.0),
                     textColor: Colors.blue,
                     child: Text("Login", style: TextStyle(fontSize: 15)),
                   ),

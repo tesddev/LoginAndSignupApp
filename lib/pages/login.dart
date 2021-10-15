@@ -10,6 +10,9 @@ class LoginPage extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10.0, 80.0, 10.0, 0.0),
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 50.0,
+            ),
             Text(
               'Login Now',
               style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.normal),
@@ -20,26 +23,17 @@ class LoginPage extends StatelessWidget {
             Text(
             'Please Login to continue using our ap',
             style: TextStyle(
-            fontSize: 10.0,
+            fontSize: 15.0,
             color: Colors.grey,
             fontWeight: FontWeight.normal),
           ),
             SizedBox(
-            height: 10.0,
-          ),
-            Center(
-            child: Image(
-              image: AssetImage('assets/homepagePicture.png'),
-              height: 200,
-              ),
-          ),
-            SizedBox(
-            height: 25.0,
+            height: 50.0,
           ),
             Text(
             'Enter via social networks',
             style: TextStyle(
-              fontSize: 10.0,
+              fontSize: 15.0,
               color: Colors.grey,
               fontWeight: FontWeight.normal),
           ),
@@ -77,14 +71,34 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 15.0,
+              height: 30.0,
             ),
             Text(
               'or login with email',
               style: TextStyle(
-                fontSize: 10.0,
+                fontSize: 13.0,
                 color: Colors.grey,
                 fontWeight: FontWeight.normal
+              ),
+            ),
+            SizedBox(
+              height: 25.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Email',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: 'Password',
+                  border: OutlineInputBorder(),
+                  helperText: 'Remember me',
+                  counterText: 'Forgot password?'
               ),
             ),
             SizedBox(
@@ -101,14 +115,11 @@ class LoginPage extends StatelessWidget {
                       padding: EdgeInsets.all(10.0),
                       color: Colors.blue[700],
                       textColor: Colors.white,
-                      child: Text("Sign up", style: TextStyle(fontSize: 15)),
+                      child: Text("Login", style: TextStyle(fontSize: 15)),
                     ),
                   ),
                 ),
               ],
-            ),
-            SizedBox(
-              height: 10.0,
             ),
             Row(
               children: [
@@ -126,11 +137,11 @@ class LoginPage extends StatelessWidget {
                   height: 50.0,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/welcomeScreen');
+                      Navigator.pushNamed(context, '/signup');
                     },
-                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 60.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 35.0, 0.0),
                     textColor: Colors.blue,
-                    child: Text("Login", style: TextStyle(fontSize: 15)),
+                    child: Text("Sign Up", style: TextStyle(fontSize: 15)),
                   ),
                 ),
               ],
