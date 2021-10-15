@@ -11,7 +11,7 @@ class SignUp extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 50.0,
+              height: 20.0,
             ),
             Text(
               'Sign Up',
@@ -28,7 +28,7 @@ class SignUp extends StatelessWidget {
                   fontWeight: FontWeight.normal),
             ),
             SizedBox(
-              height: 50.0,
+              height: 20.0,
             ),
             Text(
               'Enter via social networks',
@@ -71,7 +71,7 @@ class SignUp extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 30.0,
+              height: 23.0,
             ),
             Text(
               'or sign up with email',
@@ -91,7 +91,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             TextField(
               decoration: InputDecoration(
@@ -101,7 +101,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 25.0,
+              height: 20.0,
             ),
             Row(
               children: [
@@ -110,7 +110,9 @@ class SignUp extends StatelessWidget {
                     margin: EdgeInsets.all(10),
                     height: 60.0,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/confirmation');
+                      },
                       padding: EdgeInsets.all(10.0),
                       color: Colors.blue[700],
                       textColor: Colors.white,
@@ -136,7 +138,7 @@ class SignUp extends StatelessWidget {
                   height: 50.0,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/signup');
+                      Navigator.pushNamed(context, '/login');
                     },
                     padding: EdgeInsets.fromLTRB(0.0, 0.0, 35.0, 0.0),
                     textColor: Colors.blue,

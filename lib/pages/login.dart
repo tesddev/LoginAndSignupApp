@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 50.0,
+              height: 30.0,
             ),
             Text(
               'Login Now',
@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
             fontWeight: FontWeight.normal),
           ),
             SizedBox(
-            height: 50.0,
+            height: 30.0,
           ),
             Text(
             'Enter via social networks',
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
               fontWeight: FontWeight.normal),
           ),
             SizedBox(
-            height: 15.0,
+            height: 10.0,
           ),
             Row(
               children: <Widget>[
@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 30.0,
+              height: 28.0,
             ),
             Text(
               'or login with email',
@@ -82,7 +82,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 25.0,
+              height: 20.0,
             ),
             TextField(
               decoration: InputDecoration(
@@ -91,7 +91,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             TextField(
               decoration: InputDecoration(
@@ -102,7 +102,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 25.0,
+              height: 10.0,
             ),
             Row(
               children: [
@@ -135,6 +135,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 Container(
                   height: 50.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(70),
+                  ),
                   child: FlatButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/signup');

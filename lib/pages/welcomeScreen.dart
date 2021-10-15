@@ -76,7 +76,7 @@ class WelcomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
             Text(
               'or login with email',
@@ -87,7 +87,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 25.0,
+              height: 15.0,
             ),
             Row(
               children: [
